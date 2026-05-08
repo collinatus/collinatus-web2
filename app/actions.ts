@@ -13,7 +13,7 @@ export async function verifyAndReveal(token: string | null) {
 
   const data = await response.json();
 
-  if (data.success && data.score > 0.5) { // Assuming v3, or just data.success for v2
+  if (data.success) { // Assuming v3, or just data.success for v2
     return { success: true, email: PRIVATE_EMAIL };
   }
 
